@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Shopping for men, women, and Kids</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="flexbox.css" type="css"> -->
+    <style>
+      nav {
+        top: 0;
+      }
+      .navbar {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        -webkit-box-shadow: 1px 9px 11px 0px rgba(199, 189, 189, 0.46);
+        box-shadow: 1px 9px 11px 0px rgba(197, 194, 194, 0.46);
+      }
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      html {
+        overflow-x: hidden;
+      }
+
+      .item1 {
+        width: 80px;
+        height: 50px;
+        padding-top: 10px;
+        margin-bottom: 10px;
+        padding-right: 15px;
+        margin-right: 20px;
+        margin-left: 20px;
+        /* padding-right: 20px; */
+      }
+
+      .container {
+        display: flex;
+        margin: auto;
+        width: 100%;
+        padding-left: 25px;
+
+        box-shadow: 1px 0px 49px 11px rgb(255, 255, 255);
+      }
+
+      .menu {
+        text-align: center;
+        font-style: bold;
+        font-size: 14px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .menu:nth-child(7) {
+        flex-grow: 2;
+      }
+
+      .new {
+        color: rgb(248, 51, 195);
+      }
+
+      @media only screen and (min-width: 200px) and (max-width: 767px) {
+        .container {
+          width: 100%;
+          flex-direction: column;
+          flex-wrap: wrap;
+        }
+      }
+
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+      body {
+        background: #f2f2f2;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .search {
+        width: 350px;
+        position: relative;
+        display: flex;
+        margin-right: 25px;
+      } /*
+
+      .searchTerm {
+        width: 100%;
+        border: 1px solid #1f3e42;
+        border-right: none;
+        padding: 5px;
+        height: 23px;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+        color: #9dbfaf;
+      }
+
+      .searchTerm:focus {
+        color: #081213;
+      }
+
+      .searchButton {
+        width: 40px;
+        height: 34px;
+        border: 1px solid #1f3e42;
+        background: #f4f0f0;
+        text-align: center;
+        color: rgb(169, 47, 47);
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        font-size: 20px;
+        padding-top: 5px;
+      } */
+
+      .img-container {
+        width: 90%;
+        height: auto;
+        overflow: hidden;
+        margin-left: 90px;
+        margin-top: 100px;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .toppics{
+        display: flex;
+        height: 250px;
+        width: 190px;
+        align-items: center;
+        padding: 0;
+        background-color: #ffffff;
+        flex-direction: column;
+}
+.toppicsContent {
+        top: 0;
+        margin-top: 0px;
+        padding-top: 0px;
+        height: 200px;
+        width: 100%;
+        background-color: blue;
+      }
+      .card {
+        display: flex;
+        height: 250px;
+        width: 165px;
+        align-items: center;
+        padding: 0;
+        background-color: #ffffff;
+        flex-direction: column;
+      }
+
+      .cardbody {
+        flex-wrap: wrap;
+        display: flex;
+        margin-left: 20px;
+      }
+
+      .cardcontent {
+        top: 0;
+        margin-top: 0px;
+        padding-top: 0px;
+        height: 200px;
+        width: 100%;
+        background-color: blue;
+      }
+
+      .cardimg {
+        height: 250px;
+      }
+
+      .cardfooter {
+        background-color: rgb(233, 58, 58);
+        width: 100%;
+        height: 50px;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        padding: auto;
+        padding-top: 5px;
+      }
+      /* .profile {
+        border: 0px;
+      } */
+      .gif {
+        height: 200px;
+        width: 800px;
+        overflow: hidden;
+      }
+      .navi-con {
+        width: 30px;
+      }
+      .deals {
+        margin-top: 150px;
+        margin-left: 30px;
+        margin-bottom: 50px;
+        letter-spacing: .15em;
+      }
+      .deals1{
+        margin-top: 50px;
+        margin-left: 30px;
+        margin-bottom: 50px;
+        letter-spacing: .15em;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropbtn {
+        background-color: #ffffff;
+        color: #020202;
+      }
+
+      /* Dropdown Content (Hidden by Default) */
+      .inline a {
+        display: flex;
+      }
+
+      .dropdown-content {
+        margin-top: 0px;
+        display: none;
+        position: absolute;
+        background-color: hsl(0, 0%, 100%);
+        color: black;
+        min-width: 250px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        padding-top: 20px ;
+        padding-left:10px;
+        padding-right: 30px;
+        padding-bottom: 20px;
+      }
+
+      /* Links inside the dropdown */
+
+      .dropdown-content a {
+        color: rgb(7, 6, 6);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      /* Change color of dropdown links on hover */
+
+      .dropdown-content a:hover {
+        font-style: bold;
+        color: rgb(0, 0, 0);
+        font-size: 18px;
+      }
+      
+      /* Show the dropdown menu on hover */
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+        position: fixed;
+        top: 75px;
+        left: 100px;
+      }
+      /* Change the background color of the dropdown button when the dropdown content is shown */
+
+      .dropdown:hover .dropbtn {
+        background-color: hsl(0, 0%, 100%);
+        color: black;
+        border-bottom: solid 3px #ee5f73 ;
+        font-weight: 700;
+      }
+      
+      ul li{
+        text-decoration: none;
+        list-style: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+          <img src="./assets/logo.png" alt="Logo" class="item1" />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropbtn" aria-current="page" href="#"
+                  >MEN</a
+                > 
+               
+                <div class="dropdown-content">
+                  <div class="inline" style="display: flex">
+                    <ul>
+                      <li><span class="new">Topwear</span></b></li>
+                      <li>T-shirts</li>
+                      <li>Casual-Shirt</li>
+                      <li>Formal Shirts</li>
+                      <li>Sweater</li>
+                      <li>Sweatshirt</li>
+                      <li>Jackets</li>
+                      <li>Blazer&Coats</li>
+                      <li>Suits</li>
+                      <li>Rain Jackets</li>
+                      <hr>
+                      <li> <span class="new">Indian & Festive Wear</span> </li>
+                      <li>Kurta & Kurta Sets</li>
+                      <li>Sherwanis</li>
+                      <li>Nehru Jackets</li>
+                      <li>Dhotis</li>
+                    </ul>
+                    
+                      <ul>
+                        <li><span class="new">Topwear</span></b></li>
+                        <li>T-shirts</li>
+                        <li>Casual-Shirt</li>
+                        <li>Formal Shirts</li>
+                        <li>Sweater</li>
+                        <li>Sweatshirt</li>
+                        <li>Jackets</li>
+                        <li>Blazer&Coats</li>
+                        <li>Suits</li>
+                        <li>Rain Jackets</li>
+                        <hr>
+                        <li> <span class="new">Indian & Festive Wear</span> </li>
+                        <li>Kurta & Kurta Sets</li>
+                        <li>Sherwanis</li>
+                        <li>Nehru Jackets</li>
+                        <li>Dhotis</li>
+                      </ul>
+                      <ul>
+                        <li><span class="new">Topwear</span></b></li>
+                        <li>T-shirts</li>
+                        <li>Casual-Shirt</li>
+                        <li>Formal Shirts</li>
+                        <li>Sweater</li>
+                        <li>Sweatshirt</li>
+                        <li>Jackets</li>
+                        <li>Blazer&Coats</li>
+                        <li>Suits</li>
+                        <li>Rain Jackets</li>
+                        <hr>
+                        <li> <span class="new">Indian & Festive Wear</span> </li>
+                        <li>Kurta & Kurta Sets</li>
+                        <li>Sherwanis</li>
+                        <li>Nehru Jackets</li>
+                        <li>Dhotis</li>
+                      </ul>
+                      <ul>
+                        <li><span class="new">Topwear</span></b></li>
+                        <li>T-shirts</li>
+                        <li>Casual-Shirt</li>
+                        <li>Formal Shirts</li>
+                        <li>Sweater</li>
+                        <li>Sweatshirt</li>
+                        <li>Jackets</li>
+                        <li>Blazer&Coats</li>
+                        <li>Suits</li>
+                        <li>Rain Jackets</li>
+                        <hr>
+                        <li> <span class="new">Indian & Festive Wear</span> </li>
+                        <li>Kurta & Kurta Sets</li>
+                        <li>Sherwanis</li>
+                        <li>Nehru Jackets</li>
+                        <li>Dhotis</li>
+                      </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropbtn" aria-current="page" href="#"
+                  >WOMEN</a
+                >
+                <div class="dropdown-content">
+                  <div class="inline" style="display: flex">
+                    <ul>
+                      <li><span class="new">Topwear</span></b></li>
+                      <li>T-shirts</li>
+                      <li>Casual-Shirt</li>
+                      <li>Formal Shirts</li>
+                      <li>Sweater</li>
+                      <li>Sweatshirt</li>
+                      <li>Jackets</li>
+                      <li>Blazer&Coats</li>
+                      <li>Suits</li>
+                      <li>Rain Jackets</li>
+                      <hr>
+                      <li> <span class="new">Indian & Festive Wear</span> </li>
+                      <li>Kurta & Kurta Sets</li>
+                      <li>Sherwanis</li>
+                      <li>Nehru Jackets</li>
+                      <li>Dhotis</li>
+                    </ul>
+                    
+                      <ul>
+                        <li><span class="new">Topwear</span></b></li>
+                        <li>T-shirts</li>
+                        <li>Casual-Shirt</li>
+                        <li>Formal Shirts</li>
+                        <li>Sweater</li>
+                        <li>Sweatshirt</li>
+                        <li>Jackets</li>
+                        <li>Blazer&Coats</li>
+                        <li>Suits</li>
+                        <li>Rain Jackets</li>
+                        <hr>
+                        <li> <span class="new">Indian & Festive Wear</span> </li>
+                        <li>Kurta & Kurta Sets</li>
+                        <li>Sherwanis</li>
+                        <li>Nehru Jackets</li>
+                        <li>Dhotis</li>
+                      </ul>
+                      <ul>
+                        <li><span class="new">Topwear</span></b></li>
+                        <li>T-shirts</li>
+                        <li>Casual-Shirt</li>
+                        <li>Formal Shirts</li>
+                        <li>Sweater</li>
+                        <li>Sweatshirt</li>
+                        <li>Jackets</li>
+                        <li>Blazer&Coats</li>
+                        <li>Suits</li>
+                        <li>Rain Jackets</li>
+                        <hr>
+                        <li> <span class="new">Indian & Festive Wear</span> </li>
+                        <li>Kurta & Kurta Sets</li>
+                        <li>Sherwanis</li>
+                        <li>Nehru Jackets</li>
+                        <li>Dhotis</li>
+                      </ul>
+                      <ul>
+                        <li><span class="new">Topwear</span></b></li>
+                        <li>T-shirts</li>
+                        <li>Casual-Shirt</li>
+                        <li>Formal Shirts</li>
+                        <li>Sweater</li>
+                        <li>Sweatshirt</li>
+                        <li>Jackets</li>
+                        <li>Blazer&Coats</li>
+                        <li>Suits</li>
+                        <li>Rain Jackets</li>
+                        <hr>
+                        <li> <span class="new">Indian & Festive Wear</span> </li>
+                        <li>Kurta & Kurta Sets</li>
+                        <li>Sherwanis</li>
+                        <li>Nehru Jackets</li>
+                        <li>Dhotis</li>
+                      </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropbtn" aria-current="page" href="#"
+                  >KIDS</a
+                >
+                <div class="dropdown-content">
+                  <div class="inline" style="display: flex">
+                    <ul>
+                      <li><span class="new">Topwear</span></b></li>
+                      <li>T-shirts</li>
+                      <li>Casual-Shirt</li>
+                      <li>Formal Shirts</li>
+                      <li>Sweater</li>
+                      <li>Sweatshirt</li>
+                      <li>Jackets</li>
+                      <li>Blazer&Coats</li>
+                      <li>Suits</li>
+                      <li>Rain Jackets</li>
+                      <hr>
+                      <li> <span class="new">Indian & Festive Wear</span> </li>
+                      <li>Kurta & Kurta Sets</li>
+                      <li>Sherwanis</li>
+                      <li>Nehru Jackets</li>
+                      <li>Dhotis</li>
+                    </ul>
+                    
+                      <ul>
+                        <li><span class="new">Topwear</span></b></li>
+                        <li>T-shirts</li>
+                        <li>Casual-Shirt</li>
+                        <li>Formal Shirts</li>
+                        <li>Sweater</li>
+                        <li>Sweatshirt</li>
+                        <li>Jackets</li>
+                        <li>Blazer&Coats</li>
+                        <li>Suits</li>
+                        <li>Rain Jackets</li>
+                        <hr>
+                        <li> <span class="new">Indian & Festive Wear</span> </li>
+                        <li>Kurta & Kurta Sets</li>
+                        <li>Sherwanis</li>
+                        <li>Nehru Jackets</li>
+                        <li>Dhotis</li>
+                      </ul>
+                      <ul>
+                        <li><span class="new">Topwear</span></b></li>
+                        <li>T-shirts</li>
+                        <li>Casual-Shirt</li>
+                        <li>Formal Shirts</li>
+                        <li>Sweater</li>
+                        <li>Sweatshirt</li>
+                        <li>Jackets</li>
+                        <li>Blazer&Coats</li>
+                        <li>Suits</li>
+                        <li>Rain Jackets</li>
+                        <hr>
+                        <li> <span class="new">Indian & Festive Wear</span> </li>
+                        <li>Kurta & Kurta Sets</li>
+                        <li>Sherwanis</li>
+                        <li>Nehru Jackets</li>
+                        <li>Dhotis</li>
+                      </ul>
+                      <ul>
+                        <li><span class="new">Topwear</span></b></li>
+                        <li>T-shirts</li>
+                        <li>Casual-Shirt</li>
+                        <li>Formal Shirts</li>
+                        <li>Sweater</li>
+                        <li>Sweatshirt</li>
+                        <li>Jackets</li>
+                        <li>Blazer&Coats</li>
+                        <li>Suits</li>
+                        <li>Rain Jackets</li>
+                        <hr>
+                        <li> <span class="new">Indian & Festive Wear</span> </li>
+                        <li>Kurta & Kurta Sets</li>
+                        <li>Sherwanis</li>
+                        <li>Nehru Jackets</li>
+                        <li>Dhotis</li>
+                      </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropbtn" aria-current="page" href="#"
+                  >HOME & LIVING</a
+                >
+                <div class="dropdown-content">
+                  <div class="inline" style="display: flex">
+                    <ul>
+                      <li><span class="new">Topwear</span></b></li>
+                      <li>T-shirts</li>
+                      <li>Casual-Shirt</li>
+                      <li>Formal Shirts</li>
+                      <li>Sweater</li>
+                      <li>Sweatshirt</li>
+                      <li>Jackets</li>
+                      <li>Blazer&Coats</li>
+                      <li>Suits</li>
+                      <li>Rain Jackets</li>
+                      <hr>
+                      <li> <span class="new">Indian & Festive Wear</span> </li>
+                      <li>Kurta & Kurta Sets</li>
+                      <li>Sherwanis</li>
+                      <li>Nehru Jackets</li>
+                      <li>Dhotis</li>
+                    </ul>
+                    
+                      <ul>
+                        <li><span class="new">Topwear</span></b></li>
+                        <li>T-shirts</li>
+                        <li>Casual-Shirt</li>
+                        <li>Formal Shirts</li>
+                        <li>Sweater</li>
+                        <li>Sweatshirt</li>
+                        <li>Jackets</li>
+                        <li>Blazer&Coats</li>
+                        <li>Suits</li>
+                        <li>Rain Jackets</li>
+                        <hr>
+                        <li> <span class="new">Indian & Festive Wear</span> </li>
+                        <li>Kurta & Kurta Sets</li>
+                        <li>Sherwanis</li>
+                        <li>Nehru Jackets</li>
+                        <li>Dhotis</li>
+                      </ul>
+                      <ul>
+                        <li><span class="new">Topwear</span></b></li>
+                        <li>T-shirts</li>
+                        <li>Casual-Shirt</li>
+                        <li>Formal Shirts</li>
+                        <li>Sweater</li>
+                        <li>Sweatshirt</li>
+                        <li>Jackets</li>
+                        <li>Blazer&Coats</li>
+                        <li>Suits</li>
+                        <li>Rain Jackets</li>
+                        <hr>
+                        <li> <span class="new">Indian & Festive Wear</span> </li>
+                        <li>Kurta & Kurta Sets</li>
+                        <li>Sherwanis</li>
+                        <li>Nehru Jackets</li>
+                        <li>Dhotis</li>
+                      </ul>
+                      <ul>
+                        <li><span class="new">Topwear</span></b></li>
+                        <li>T-shirts</li>
+                        <li>Casual-Shirt</li>
+                        <li>Formal Shirts</li>
+                        <li>Sweater</li>
+                        <li>Sweatshirt</li>
+                        <li>Jackets</li>
+                        <li>Blazer&Coats</li>
+                        <li>Suits</li>
+                        <li>Rain Jackets</li>
+                        <hr>
+                        <li> <span class="new">Indian & Festive Wear</span> </li>
+                        <li>Kurta & Kurta Sets</li>
+                        <li>Sherwanis</li>
+                        <li>Nehru Jackets</li>
+                        <li>Dhotis</li>
+                      </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropbtn" aria-current="page" href="#"
+                  >BEAUTY</a
+                >
+                <div class="dropdown-content">
+                  <div class="inline" style="display: flex">
+                    <ul>
+                      <li><span class="new">Topwear</span></b></li>
+                      <li>T-shirts</li>
+                      <li>Casual-Shirt</li>
+                      <li>Formal Shirts</li>
+                      <li>Sweater</li>
+                      <li>Sweatshirt</li>
+                      <li>Jackets</li>
+                      <li>Blazer&Coats</li>
+                      <li>Suits</li>
+                      <li>Rain Jackets</li>
+                      <hr>
+                      <li> <span class="new">Indian & Festive Wear</span> </li>
+                      <li>Kurta & Kurta Sets</li>
+                      <li>Sherwanis</li>
+                      <li>Nehru Jackets</li>
+                      <li>Dhotis</li>
+                    </ul>
+                    
+                      <ul>
+                        <li><span class="new">Topwear</span></b></li>
+                        <li>T-shirts</li>
+                        <li>Casual-Shirt</li>
+                        <li>Formal Shirts</li>
+                        <li>Sweater</li>
+                        <li>Sweatshirt</li>
+                        <li>Jackets</li>
+                        <li>Blazer&Coats</li>
+                        <li>Suits</li>
+                        <li>Rain Jackets</li>
+                        <hr>
+                        <li> <span class="new">Indian & Festive Wear</span> </li>
+                        <li>Kurta & Kurta Sets</li>
+                        <li>Sherwanis</li>
+                        <li>Nehru Jackets</li>
+                        <li>Dhotis</li>
+                      </ul>
+                      <ul>
+                        <li><span class="new">Topwear</span></b></li>
+                        <li>T-shirts</li>
+                        <li>Casual-Shirt</li>
+                        <li>Formal Shirts</li>
+                        <li>Sweater</li>
+                        <li>Sweatshirt</li>
+                        <li>Jackets</li>
+                        <li>Blazer&Coats</li>
+                        <li>Suits</li>
+                        <li>Rain Jackets</li>
+                        <hr>
+                        <li> <span class="new">Indian & Festive Wear</span> </li>
+                        <li>Kurta & Kurta Sets</li>
+                        <li>Sherwanis</li>
+                        <li>Nehru Jackets</li>
+                        <li>Dhotis</li>
+                      </ul>
+                      <ul>
+                        <li><span class="new">Topwear</span></b></li>
+                        <li>T-shirts</li>
+                        <li>Casual-Shirt</li>
+                        <li>Formal Shirts</li>
+                        <li>Sweater</li>
+                        <li>Sweatshirt</li>
+                        <li>Jackets</li>
+                        <li>Blazer&Coats</li>
+                        <li>Suits</li>
+                        <li>Rain Jackets</li>
+                        <hr>
+                        <li> <span class="new">Indian & Festive Wear</span> </li>
+                        <li>Kurta & Kurta Sets</li>
+                        <li>Sherwanis</li>
+                        <li>Nehru Jackets</li>
+                        <li>Dhotis</li>
+                      </ul>
+                  </div>
+                </div>
+              </li>
+             
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropbtn" aria-current="page" href="#"
+                  >STUDIO <sup class="new">NEW</sup></a
+                >
+                <div class="dropdown-content">
+                  <div class="inline" style="display: flex">
+                    <ul>
+                      <li><span class="new">Topwear</span></b></li>
+                      <li>T-shirts</li>
+                      <li>Casual-Shirt</li>
+                      <li>Formal Shirts</li>
+                      <li>Sweater</li>
+                      <li>Sweatshirt</li>
+                      <li>Jackets</li>
+                      <li>Blazer&Coats</li>
+                      <li>Suits</li>
+                      <li>Rain Jackets</li>
+                      <hr>
+                      <li> <span class="new">Indian & Festive Wear</span> </li>
+                      <li>Kurta & Kurta Sets</li>
+                      <li>Sherwanis</li>
+                      <li>Nehru Jackets</li>
+                      <li>Dhotis</li>
+                    </ul>
+                    
+                      <ul>
+                        <li><span class="new">Topwear</span></b></li>
+                        <li>T-shirts</li>
+                        <li>Casual-Shirt</li>
+                        <li>Formal Shirts</li>
+                        <li>Sweater</li>
+                        <li>Sweatshirt</li>
+                        <li>Jackets</li>
+                        <li>Blazer&Coats</li>
+                        <li>Suits</li>
+                        <li>Rain Jackets</li>
+                        <hr>
+                        <li> <span class="new">Indian & Festive Wear</span> </li>
+                        <li>Kurta & Kurta Sets</li>
+                        <li>Sherwanis</li>
+                        <li>Nehru Jackets</li>
+                        <li>Dhotis</li>
+                      </ul>
+                      <ul>
+                        <li><span class="new">Topwear</span></b></li>
+                        <li>T-shirts</li>
+                        <li>Casual-Shirt</li>
+                        <li>Formal Shirts</li>
+                        <li>Sweater</li>
+                        <li>Sweatshirt</li>
+                        <li>Jackets</li>
+                        <li>Blazer&Coats</li>
+                        <li>Suits</li>
+                        <li>Rain Jackets</li>
+                        <hr>
+                        <li> <span class="new">Indian & Festive Wear</span> </li>
+                        <li>Kurta & Kurta Sets</li>
+                        <li>Sherwanis</li>
+                        <li>Nehru Jackets</li>
+                        <li>Dhotis</li>
+                      </ul>
+                      <ul>
+                        <li><span class="new">Topwear</span></b></li>
+                        <li>T-shirts</li>
+                        <li>Casual-Shirt</li>
+                        <li>Formal Shirts</li>
+                        <li>Sweater</li>
+                        <li>Sweatshirt</li>
+                        <li>Jackets</li>
+                        <li>Blazer&Coats</li>
+                        <li>Suits</li>
+                        <li>Rain Jackets</li>
+                        <hr>
+                        <li> <span class="new">Indian & Festive Wear</span> </li>
+                        <li>Kurta & Kurta Sets</li>
+                        <li>Sherwanis</li>
+                        <li>Nehru Jackets</li>
+                        <li>Dhotis</li>
+                      </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <div class="input-group mb-3 search">
+                <span class="input-group-text" id="basic-addon1"
+                  ><i class="fa-solid fa-magnifying-glass"></i
+                ></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Username"
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                />
+              </div>
+            </form>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 menu">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  ><i class="fa-regular fa-user navi-con"></i><br />
+                  Profile</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  ><i class="fa-sharp fa-regular fa-heart navi-con"></i><br />
+                  Wishlist</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  <i class="fa-solid fa-bag-shopping navi-con"></i><br />
+                  Bag</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+  <!-- <div class="">
+        <img src="./assets/banner.png" alt="your-image-description" />
+      </div> -->
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide img-container"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./assets/banner.gif"
+              class="d-block w-100 img-fluid"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./assets/banner1.webp"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./assets/banner2.webp"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      
+    </div>
+    <section>
+      <div class="deals">
+        <h2><b>DEAL OF THE DAY</b></h2>
+      </div>
+    </section>
+    <section class="cardbody">
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/product7.webp" alt="card image" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/product2.webp" alt="card image" />
+        </div>
+      
+      </div>
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/product3.jpeg" alt="card image" />
+        </div>
+      
+      </div>
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/product4.webp" alt="card image" />
+        </div>
+      
+      </div>
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/product5.webp" alt="card image" />
+        </div>
+        
+      </div>
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/product6.webp" alt="card image" />
+        </div>
+    
+      </div>
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/product8.webp" alt="card image" />
+        </div>
+      </div>
+     
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/product9.webp" alt="card image" />
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="deals1">
+        <h2><b>BEST OF THE MYNTRA EXCLUSIVE BRANDS</b></h2>
+      </div>
+    </section>
+    <section class="cardbody">
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/product1.webp" alt="card image" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/brand2.webp" alt="card image" />
+        </div>
+      
+      </div>
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/brand3.webp" alt="card image" />
+        </div>
+      
+      </div>
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/brand4.webp" alt="card image" />
+        </div>
+      
+      </div>
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/brand5.webp" alt="card image" />
+        </div>
+        
+      </div>
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/brand6.webp" alt="card image" />
+        </div>
+    
+      </div>
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/brand7.webp" alt="card image" />
+        </div>
+      </div>
+     
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/brand8.webp" alt="card image" />
+        </div>
+      </div>
+    </section>
+    <section class="cardbody">
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/brand9.webp" alt="card image" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/brand10.webp" alt="card image" />
+        </div>
+      
+      </div>
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/brand11.webp" alt="card image" />
+        </div>
+      
+      </div>
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/brand12.webp" alt="card image" />
+        </div>
+      
+      </div>
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/brand13.webp" alt="card image" />
+        </div>
+        
+      </div>
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/brand14.webp" alt="card image" />
+        </div>
+    
+      </div>
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/brand13.webp" alt="card image" />
+        </div>
+      </div>
+     
+      <div class="card">
+        <div class="cardcontent content">
+          <img class="cardimg" src="./assets/brand16 .webp" alt="card image" />
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="deals1">
+        <h2><b>TOP PICS</b></h2>
+      </div>
+    </section>
+    <section class="cardbody">
+      <div class="toppics">
+        <div class="toppicsContent">
+          <img class="cardimg" src="./assets/toppics1.webp" alt="card image" />
+        </div>
+      </div>
+      <div class="toppics">
+        <div class="toppicsContent">
+          <img class="cardimg" src="./assets/toppics2.webp" alt="card image" />
+        </div>
+      
+      </div>
+      <div class="toppics">
+        <div class="toppicsContent">
+          <img class="cardimg" src="./assets/toppics3.webp" alt="card image" />
+        </div>
+      
+      </div>
+      <div class="toppics">
+        <div class="toppicsContent">
+          <img class="cardimg" src="./assets/toppics4.webp" alt="card image" />
+        </div>
+      
+      </div>
+      <div class="toppics">
+        <div class="toppicsContent">
+          <img class="cardimg" src="./assets/toppics5.webp" alt="card image" />
+        </div>
+        
+      </div>
+      <div class="toppics">
+        <div class="toppicsContent">
+          <img class="cardimg" src="./assets/toppics6.webp" alt="card image" />
+        </div>
+      </div>
+      <div class="toppics">
+        <div class="toppicsContent">
+          <img class="cardimg" src="./assets/toppics7.webp" alt="card image" />
+        </div>
+      </div>
+    </section>   
+    <section>
+      <div class="deals1">
+        <h2><b>CATEGORIES TO BAG</b></h2>
+      </div>
+    </section>
+  </body>
+</html>
