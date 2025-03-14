@@ -28,9 +28,10 @@ nav {
 
   .container {
     display: flex;
-    margin: auto;
+    margin: 0 auto;
+    max-width: 1440px !important;
     width: 100%;
-    padding-left: 25px;
+    /* padding-left: 25px; */
 
     box-shadow: 1px 0px 49px 11px rgb(255, 255, 255);
   }
@@ -107,6 +108,7 @@ nav {
     overflow: hidden;
     margin-left: 90px;
     margin-top: 100px;
+    padding: 0px !important;
   }
 
   img {
@@ -144,7 +146,7 @@ nav {
     flex-wrap: wrap;
     display: flex;
     margin-left: 20px;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .cardcontent {
